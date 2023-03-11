@@ -9,7 +9,7 @@ pipeline {
                     echo "Older containers was deleted, creating new containers"
                 else
                     echo "Creating container..."
-                fi'.stripIndent()
+                fi'.stripIndent())
                 sh 'docker build --tag cloudin-backend .'
                 sh 'docker run -d -p 5000:5000 cloudin-backend'
             }
