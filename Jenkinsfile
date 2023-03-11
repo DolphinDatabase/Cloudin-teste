@@ -1,5 +1,7 @@
 pipeline {
-     agent any
+     agent {
+        docker { image 'python:3.11-bullseye' }
+    }
      stages {
          stage('Install dependencies') {
              steps {
