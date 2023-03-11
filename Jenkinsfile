@@ -4,8 +4,8 @@ pipeline {
         stage('Clean Docker') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    sh 'docker rm -v $(docker ps -aq -f status=exited)'
-                    sh 'docker rmi -f $(docker images -aq -f status=exited)'
+                    sh 'docker rm -vf $(docker ps -aq)'
+                    sh 'docker rmi -f $(docker images -aq)'
                 }
             }
         }
