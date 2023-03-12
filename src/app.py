@@ -8,4 +8,4 @@ def helloWorld():
 
 @app.route("/teste")
 def teste():
-    return "teste"
+    return "teste update"
