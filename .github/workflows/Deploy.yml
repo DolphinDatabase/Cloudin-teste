@@ -11,8 +11,8 @@ jobs:
     - name: verify credentials
       run: |
         echo ${{ secrets.SSH_HOST }}
-        echo: ${{ secrets.SSH_USER }}
-        echo: ${{ secrets.SSH_KEY }}
+        echo ${{ secrets.SSH_USER }}
+        echo ${{ secrets.SSH_KEY }}
     - name: executing remote ssh 
       uses: appleboy/ssh-action@master
       with:
