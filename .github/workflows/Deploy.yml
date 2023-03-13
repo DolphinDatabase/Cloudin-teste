@@ -9,12 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh 
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@v0.1.8
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
-        port: 22
-        passphrase: ''
         script: |
                     echo 'Hello World'
