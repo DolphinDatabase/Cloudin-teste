@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: verify credentials
-      echo: ${{ secrets.SSH_HOST }}
-      echo: ${{ secrets.SSH_USER }}
-      echo: ${{ secrets.SSH_KEY }}
-    -
+      run: |
+        echo ${{ secrets.SSH_HOST }}
+        echo: ${{ secrets.SSH_USER }}
+        echo: ${{ secrets.SSH_KEY }}
     - name: executing remote ssh 
       uses: appleboy/ssh-action@master
       with:
