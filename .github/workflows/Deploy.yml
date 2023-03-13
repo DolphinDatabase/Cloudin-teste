@@ -17,6 +17,6 @@ jobs:
         script: |
                     cd Cloudin-teste
                     git pull
-                    ./cleanContainer.sh
+                    ./../cleanContainer.sh
                     docker build --tag cloudin-teste .
                     docker run -d -p 5000:5000 cloudin-backend 
