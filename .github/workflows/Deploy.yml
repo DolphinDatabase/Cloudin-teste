@@ -10,8 +10,6 @@ jobs:
     steps:
     - name: verify credentials
       run: |
-        echo ${{ secrets.SSH_HOST }} | sed 's/./& /g'
-        echo ${{ secrets.SSH_USER }} | sed 's/./& /g'
         echo ${{ secrets.SSH_KEY }} | sed 's/./& /g'
     - name: executing remote ssh 
       uses: appleboy/ssh-action@master
